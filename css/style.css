@@ -1,4 +1,3 @@
-/* General body styles */
 body {
   margin: 0;
   padding: 15px 20px;
@@ -9,40 +8,23 @@ body {
   background: #211D1B;
   font-family: cursor, monospace;
   overflow-x: hidden;
-  box-sizing: border-box; /* Added to prevent elements from overflowing */
 }
-
-/* Preventing the page from shrinking on smaller screens */
-@media screen and (max-width: 768px) {
-  body {
-    min-width: 100%; /* Ensures the page doesn't shrink */
-    padding: 10px; /* Slightly reduce padding for mobile view */
-  }
-}
-
-/* Selection styles */
 ::selection {
   color: #211830;
   background-color: #519975;
 }
-
 ::-moz-selection {
   color: #211830;
   background-color: #519975;
 }
-
-/* Hide textarea */
 textarea {
   left: -1000px;
   position: absolute;
 }
-
-/* Bold text with underline */
 b {
   font-weight: bold;
   text-decoration: underline;
 }
-
 /* Cursor Start */
 .cursor {
   font-size: 12px;
@@ -60,21 +42,16 @@ b {
   text-decoration: blink;
   animation: blinker 1s linear infinite;
 }
-
 @keyframes blinker {
   50% {
     opacity: 0;
   }
 }
-
-/* Command input styling */
 #command {
   cursor: text;
   height: 50px;
   color: #73ABAD;
 }
-
-/* Liner (command prompt) styling */
 #liner {
   line-height: 1.3em;
   margin-top: -2px;
@@ -82,16 +59,13 @@ b {
   animation-delay: 1.2s;
   opacity: 0;
 }
-
 #liner::before {
   color: #519975;
   content: "visitor@akashlamsal.com.np:~$";
 }
-
 #liner.password::before {
   content: "Password:";
 }
-
 @keyframes show {
   from {
     opacity: 0;
@@ -100,10 +74,7 @@ b {
     opacity: 1;
   }
 }
-
 /* Cursor End */
-
-/* Paragraph styling with typing effect */
 p {
   display: block;
   line-height: 1.3em;
@@ -114,17 +85,12 @@ p {
   letter-spacing: 0.05em;
   animation: typing 0.5s steps(30, end);
 }
-
 .no-animation {
   animation: typing 0 steps(30, end);
 }
-
-/* Adjust margin */
 .margin {
   margin-left: 20px;
 }
-
-/* Typing animation */
 @keyframes typing {
   from {
     width: 0;
@@ -133,70 +99,33 @@ p {
     width: 100%;
   }
 }
-
-/* Color classes */
 .index {
   color: #DCDCCC;
 }
-
 .color2 {
   color: #B89076;
 }
-
 .command {
   color: #73ABAD;
   text-shadow: 0 0 5px #73ABAD; 
 }
-
 .error {
   color: #B89076;
 }
-
 .white {
   color: #fff;
 }
-
 .inherit,
 a {
   color: #9C8394;
 }
-
 a {
   text-decoration: inherit;
 }
-
 a:hover {
   background: #73ABAD;
   color: #211830;
 }
-
 a:focus {
   outline: 0;
-}
-
-/* Mobile responsive adjustments */
-@media screen and (max-width: 480px) {
-  body {
-    padding: 10px;
-    min-width: 100%; /* Ensures body does not shrink */
-  }
-
-  /* Adjust font size for smaller screens */
-  .cursor {
-    font-size: 10px;
-  }
-
-  /* Adjust the command area height for smaller devices */
-  #command {
-    height: 40px;
-  }
-
-  /* Ensure liner text scales appropriately */
-  #liner {
-    font-size: 14px;
-  }
-
-  p {
-    font-size: 14px; /* Make the text smaller to fit smaller screens */
-  }
-}
+} makee this css responsive in mobile view which doesnot shrink width of page
